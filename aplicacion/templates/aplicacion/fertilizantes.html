@@ -1,0 +1,36 @@
+{% extends 'aplicacion/home.html' %}
+
+{% block titulo %}
+
+    <h1 class="masthead-heading mb-0">Fertilizantes</h1>
+            
+{% endblock titulo %}
+
+{% block contenido %}
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nombre del Fertilizante</th>
+            <th>Nutrientes</th>
+            <th>Dosis</th>
+            <th>Precauciones</th>
+        </tr>
+    </thead>
+    <tbody>
+
+{% for f in fertilizantes %}
+        <tr>
+            <td>{{f.id}}</td>
+            <td>{{f.nombre}}</td>
+            <td>{{f.nutrientes}}</td>
+            <td>{{f.dosis}}</td>
+            <td>{{f.precauciones}}</td>
+        </tr>
+{% endfor %}
+    </tbody>
+</table>
+            
+{% endblock contenido %}
+

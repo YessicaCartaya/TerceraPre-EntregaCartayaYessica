@@ -1,0 +1,35 @@
+{% extends 'aplicacion/home.html' %}
+
+{% block titulo %}
+
+    <h1 class="masthead-heading mb-0">Macetas</h1>
+            
+{% endblock titulo %}
+
+{% block contenido %}
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Material de la Maceta</th>
+            <th>Forma</th>
+            <th>Tamaño</th>
+            <th>Color</th>
+        </tr>
+    </thead>
+    <tbody>
+
+{% for m in macetas %}
+        <tr>
+            <td>{{m.id}}</td>
+            <td>{{m.material}}</td>
+            <td>{{m.forma}}</td>
+            <td>{{m.tamaño}}</td>
+            <td>{{m.color}}</td>
+        </tr>
+{% endfor %}
+    </tbody>
+</table>
+            
+{% endblock contenido %}

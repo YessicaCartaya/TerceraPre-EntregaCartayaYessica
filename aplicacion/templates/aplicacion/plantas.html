@@ -1,0 +1,39 @@
+{% extends 'aplicacion/home.html' %}
+
+{% block titulo %}
+
+    <h1 class="masthead-heading mb-0">Plantas</h1>
+            
+{% endblock titulo %}
+
+{% block contenido %}
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nombre de la Planta</th>
+                <th>Ambiente de Ubicación</th>
+                <th>Tipo de Riego</th>
+                <th>Iluminación</th>
+                <th>Tamaño de la Planta</th>
+            </tr>
+        </thead>
+        <tbody>
+
+    {% for p in plantas %}
+            <tr>
+                <td>{{p.id}}</td>
+                <td>{{p.nombre}}</td>
+                <td>{{p.ambiente}}</td>
+                <td>{{p.riego}}</td>
+                <td>{{p.iluminacion}}</td>
+                <td>{{p.tamaño}}</td>
+            </tr>
+    {% endfor %}
+        </tbody>
+    </table>
+    
+{% endblock contenido %}
+    
+
